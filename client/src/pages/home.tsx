@@ -449,10 +449,6 @@ export default function Home() {
                   <span className="text-white ml-2">{personalInfo.email}</span>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-ubuntu-orange">PHONE:</span>
-                  <span className="text-white ml-2">{personalInfo.phone}</span>
-                </div>
-                <div className="flex items-center">
                   <span className="text-ubuntu-orange">LOCATION:</span>
                   <span className="text-white ml-2">Ujjain, Madhya Pradesh, India</span>
                 </div>
