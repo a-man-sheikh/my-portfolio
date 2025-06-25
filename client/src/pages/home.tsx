@@ -212,17 +212,7 @@ export default function Home() {
           </div>
 
           {/* Additional Skills */}
-          <div className="mt-8 grid md:grid-cols-2 gap-6">
-            <div className="bg-ubuntu-dark p-6 rounded border border-ubuntu-border">
-              <h3 className="text-ubuntu-orange font-semibold mb-4">Data Analytics</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.dataAnalytics.map((skill, index) => (
-                  <span key={index} className="bg-ubuntu-orange text-ubuntu-dark px-3 py-1 rounded text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+    
             <div className="bg-ubuntu-dark p-6 rounded border border-ubuntu-border">
               <h3 className="text-ubuntu-orange font-semibold mb-4">Development Tools</h3>
               <div className="flex flex-wrap gap-2">
