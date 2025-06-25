@@ -524,15 +524,15 @@ export default function Home() {
 
           {/* Social Links & Resume */}
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <a href="#" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors flex items-center">
+            <a href="https://www.linkedin.com/in/a-mansheikh/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition-colors flex items-center">
               <Linkedin className="mr-2 w-5 h-5" />
               LinkedIn Profile
             </a>
-            <a href="#" className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded transition-colors flex items-center">
+            <a href="https://github.com/a-man-sheikh" className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded transition-colors flex items-center">
               <Github className="mr-2 w-5 h-5" />
               GitHub Profile
             </a>
-            <a href="#" className="bg-ubuntu-orange hover:bg-orange-600 text-white px-6 py-3 rounded transition-colors flex items-center">
+            <a href="https://drive.google.com/file/d/1hCVXLMEH_kyEwMXbhUn7TCJup6Eq6A9v/view?usp=sharing" className="bg-ubuntu-orange hover:bg-orange-600 text-white px-6 py-3 rounded transition-colors flex items-center">
               <Download className="mr-2 w-5 h-5" />
               Download Resume
             </a>
