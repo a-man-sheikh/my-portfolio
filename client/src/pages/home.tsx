@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TerminalWindow } from "@/components/terminal-window";
 import { ProgressBar } from "@/components/progress-bar";
 import { TypingAnimation } from "@/components/typing-animation";
+import { InteractiveTerminal } from "@/components/interactive-terminal";
 import { personalInfo, skills, experience, education, projects, softSkills, hobbies } from "@/data/portfolio-data";
 import { 
   User, 
@@ -35,7 +36,7 @@ export default function Home() {
   };
 
   const renderHeroSection = () => (
-    <section className="min-h-screen flex items-center justify-center px-4">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 gap-8">
       <TerminalWindow title="Terminal - aman@ubuntu-portfolio" className="max-w-4xl w-full">
         <div className="font-ubuntu-mono">
           <div className="space-y-2">
@@ -61,12 +62,21 @@ export default function Home() {
               <span className="text-terminal-green">aman@ubuntu-portfolio</span>
               <span className="text-white">:</span>
               <span className="text-blue-400">~</span>
-              <span className="text-white">$ </span>
-              <span className="blinking-cursor">_</span>
+              <span className="text-white">$ help</span>
+            </div>
+            <div className="text-gray-300 text-sm mt-2">
+              Try commands: ls, cd about, skills, projects, experience, contact
             </div>
           </div>
         </div>
       </TerminalWindow>
+      
+      <div className="max-w-4xl w-full">
+        <InteractiveTerminal 
+          onSectionChange={navigateToSection} 
+          currentSection={activeSection}
+        />
+      </div>
     </section>
   );
 
