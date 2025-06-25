@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&family=Ubuntu+Mono:wght@400;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Ubuntu Theme Colors */
+  --ubuntu-dark: hsl(0, 0%, 17.6%);
+  --ubuntu-light: hsl(0, 0%, 23.5%);
+  --ubuntu-orange: hsl(18, 80%, 52%);
+  --ubuntu-purple: hsl(309, 38%, 35%);
+  --terminal-green: hsl(120, 100%, 50%);
+  --ubuntu-border: hsl(0, 0%, 33.3%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: linear-gradient(135deg, var(--ubuntu-dark) 0%, hsl(0, 0%, 10.2%) 100%);
+    color: white;
+    font-family: 'Ubuntu', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Ubuntu wallpaper pattern */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.05;
+    background-image: 
+      radial-gradient(circle at 25% 25%, var(--ubuntu-orange) 0%, transparent 50%), 
+      radial-gradient(circle at 75% 75%, var(--ubuntu-purple) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--ubuntu-dark);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--ubuntu-orange);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(18, 80%, 47%);
+  }
+}
+
+@layer utilities {
+  .font-ubuntu {
+    font-family: 'Ubuntu', system-ui, sans-serif;
+  }
+  
+  .font-ubuntu-mono {
+    font-family: 'Ubuntu Mono', 'Courier New', monospace;
+  }
+  
+  .bg-ubuntu-dark {
+    background-color: var(--ubuntu-dark);
+  }
+  
+  .bg-ubuntu-light {
+    background-color: var(--ubuntu-light);
+  }
+  
+  .bg-ubuntu-orange {
+    background-color: var(--ubuntu-orange);
+  }
+  
+  .bg-ubuntu-purple {
+    background-color: var(--ubuntu-purple);
+  }
+  
+  .text-ubuntu-orange {
+    color: var(--ubuntu-orange);
+  }
+  
+  .text-ubuntu-purple {
+    color: var(--ubuntu-purple);
+  }
+  
+  .text-terminal-green {
+    color: var(--terminal-green);
+  }
+  
+  .border-ubuntu-border {
+    border-color: var(--ubuntu-border);
+  }
+  
+  .border-ubuntu-orange {
+    border-color: var(--ubuntu-orange);
+  }
+
+  /* Animations */
+  .typing-animation {
+    overflow: hidden;
+    border-right: 3px solid var(--ubuntu-orange);
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--ubuntu-orange); }
+  }
+
+  .blinking-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .terminal-nav:hover {
+    text-shadow: 0 0 5px currentColor;
+  }
+
+  /* Smooth progress bar animations */
+  .progress-bar {
+    transition: width 1s ease-out;
+  }
+}
