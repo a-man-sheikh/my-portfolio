@@ -2,10 +2,9 @@ export const personalInfo = {
   name: "Aman Sheikh",
   title: "Back End Developer & MERN Stack Enthusiast",
   location: "Kanasiya naka tarana road, Dist- ujjain-456770",
-  phone: "+91-9617505456",
   email: "sheikhaman0321@gmail.com",
-  linkedin: "Linkedin",
-  github: "Github"
+  linkedin: "https://www.linkedin.com/in/a-mansheikh/",
+  github: "https://github.com/a-man-sheikh"
 };
 
 export const skills = {
