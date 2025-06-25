@@ -26,7 +26,6 @@ export const skills = {
     { name: "Git/GitHub", level: 80 },
     { name: "Postman", level: 85 }
   ],
-  dataAnalytics: ["Data Analysis", "Data Modeling", "GCP BigQuery", "SQL Queries"],
   devTools: ["VS Code", "IntelliJ", "Eclipse", "Visual Paradigm"]
 };
 
